@@ -1,0 +1,31 @@
+<ion-content class="ion-padding">
+  <h1>Movies,</h1>
+  <h3>Inicia sesión, para continuar</h3>
+
+  <form>
+    <app-input
+      label="Correo"
+      [(ngModel)]="correo"
+      name="correo"
+      ngDefaultControl
+    ></app-input>
+    <app-input
+      label="Contraseña"
+      type="password"
+      [(ngModel)]="password"
+      name="password"
+      ngDefaultControl
+    ></app-input>
+
+    <a routerLink="#" class="forgot-password-link">¿Olvidaste tu contraseña?</a>
+
+    <app-button label="Login" (click)="checkCredential()"></app-button>
+    <app-icon-button
+      icon="logo-google"
+      label="Inicia sesión con google"
+      (click)="checkCredential()"
+    ></app-icon-button>
+  </form>
+
+  <p class="footer-text">I'm a new user, <a routerLink="#">Sign Up</a></p>
+</ion-content>

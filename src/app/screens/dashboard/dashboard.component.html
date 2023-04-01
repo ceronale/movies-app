@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Movies</ion-title>
+    <ion-buttons slot="end" (click)="logOut()">
+      <ion-button>
+        <ion-icon slot="icon-only" name="exit"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-toolbar>
+    <app-input
+      label="Buscar"
+      [(ngModel)]="searchTerm"
+      name="buscar"
+      ngDefaultControl
+    ></app-input>
+    <ion-buttons slot="end">
+      <ion-button (click)="searchMovies()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let movie of movies">
+      <app-card
+        [img]="movie.Poster"
+        [title]="movie.Title"
+        [subtitle]="movie.Year"
+        [content]="movie.Plot"
+        [id]="movie.imdbID"
+        [descripcion]="movie.descripcion"
+      ></app-card>
+    </ion-item>
+  </ion-list>
+</ion-content>

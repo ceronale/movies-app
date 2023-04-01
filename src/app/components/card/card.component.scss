@@ -1,0 +1,50 @@
+ion-card {
+  --box-shadow: none;
+  --border-radius: 10px;
+  --background: linear-gradient(
+    90deg,
+    rgba(250, 87, 142, 1) 0%,
+    rgba(254, 171, 142, 1) 100%
+  );
+
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  text-transform: initial;
+
+  /* Set a fixed width for the ion-card */
+  width: calc(100% - 1rem); /* This will make two cards fit in one row */
+
+  /* Add padding to the card to accommodate the card content */
+  padding: 1rem;
+}
+
+ion-card-header,
+ion-card-subtitle,
+ion-card-content,
+ion-card-title {
+  color: #fff;
+}
+
+.movie-poster {
+  max-width: 100%;
+}
+
+ion-content {
+  padding: 16px;
+}
+
+h2 {
+  margin-top: 0;
+}
+.photo-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.photo-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+}
